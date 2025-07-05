@@ -17,18 +17,20 @@
       
     <div class="formelement">
         <label for="Phoneno">Phone-Number</label>
-       <input type="text" id="Phoneno" name="Phoneno" >
+       <input type="text" id="Phoneno" name="Phoneno" maxlength="10" autocomplete="off">
      </div>
        
 
      <div class="formelement">
         <label for="pass">Password</label>
        <input type="password" id="password" name="password" >
+       <button type="button" id="togglePassword" style="margin-left:10px; font-size:18px;">Show</button>
      </div>
 
      <div class="formelement">
         <label for="confirmpassword">Confirm-Password</label>
-       <input type="text" id="confirmpassword" name="confirmpassword" >
+       <input type="password" id="confirmpassword" name="confirmpassword" >
+       <button type="button" id="toggleConfirmPassword">Show</button>
      </div>
         <input id="submitbutton" type="submit">
         <div id="result-message" style="margin-top:20px;"></div>

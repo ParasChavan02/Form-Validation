@@ -9,6 +9,29 @@
             return regex.test(password);
         }
 
+        // Phone number: only digits, max 10
+        $("#Phoneno").on("input", function() {
+            let val = $(this).val().replace(/\D/g, "");
+            if (val.length > 10) val = val.slice(0, 10);
+            $(this).val(val);
+        });
+
+        // Password show/hide toggle
+        $("#togglePassword").on("click", function() {
+            const passInput = $("#password");
+            const type = passInput.attr("type") === "password" ? "text" : "password";
+            passInput.attr("type", type);
+            $(this).text(type === "password" ? "Show" : "Hide");
+        });
+
+        // Confirm password show/hide toggle
+        $("#toggleConfirmPassword").on("click", function() {
+            const passInput = $("#confirmpassword");
+            const type = passInput.attr("type") === "password" ? "text" : "password";
+            passInput.attr("type", type);
+            $(this).text(type === "password" ? "Show" : "Hide");
+        });
+
         $("#submitbutton").click(function(event){
             event.preventDefault();
             var errormsg = "";

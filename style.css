@@ -1,3 +1,8 @@
+        #toggleConfirmPassword {
+            margin-left: 10px;
+            font-size: 18px;
+            cursor: pointer;
+        }
  body{
             font-family:Arial, Helvetica, sans-serif;
             font-size: 130%;
@@ -30,4 +35,14 @@
         #submitbutton{
             width: 130px;
             margin-left: 200px;
+        }
+
+        #result-message {
+            margin-top: 20px;
+        }
+
+        #togglePassword {
+            margin-left: 10px;
+            font-size: 18px;
+            cursor: pointer;
         }
