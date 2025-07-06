@@ -4,8 +4,8 @@
         }
 
         function isPasswordValid(password) {
-            // At least 8 chars, 1 uppercase, 1 lowercase, 1 number
-            var regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+            // At least 8 chars, 1 uppercase, 1 lowercase, 1 number, 1 special character
+            var regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]).{8,}$/;
             return regex.test(password);
         }
 
@@ -47,7 +47,7 @@
                 errormsg += "<p>Phone number is not valid</p>";
             }
             if (!isPasswordValid(password)) {
-                errormsg += "<p>Password must be at least 8 characters, include uppercase, lowercase, and a number</p>";
+                errormsg += "<p>Password must be at least 8 characters, include uppercase, lowercase, a number, and a special character</p>";
             }
             if (password !== confirmpassword) {
                 errormsg += "<p>Passwords do not match</p>";
